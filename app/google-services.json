@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "481753165105",
+    "project_id": "realtime-8def5",
+    "storage_bucket": "realtime-8def5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481753165105:android:e73d869b281d30af165410",
+        "android_client_info": {
+          "package_name": "com.example.proyekpmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcTZG6zan-d2Ry4pZBKTrOROl-XdX9Y6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
