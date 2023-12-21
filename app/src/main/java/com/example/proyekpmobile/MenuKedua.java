@@ -16,12 +16,9 @@ import android.widget.Toast;
 
 
 public class MenuKedua extends AppCompatActivity {
-    private EditText editpesan;
-    private Button button;
-
     private static final String TAG = "MenuKedua";
 
-    @SuppressLint("WrongViewCast")
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,13 +26,13 @@ public class MenuKedua extends AppCompatActivity {
 
         Log.d(TAG, "Ini ada di Menu Pick Up");
 
-        button = findViewById(R.id.buttonSubmit);
-        editpesan = findViewById(R.id.textViewPickUpLocation);
-        //EditText editwaktu = findViewById(R.id.textViewPickUpTime);
+
+        Button button = findViewById(R.id.buttonSubmit);
+       final EditText editpesan = findViewById(R.id.editpesan);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String pesan = editpesan.getText().toString();
                 boolean installed = appinstalledOrNot("com.Whatsapp");
                 if (installed){

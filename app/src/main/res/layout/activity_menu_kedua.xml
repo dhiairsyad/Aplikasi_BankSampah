@@ -16,37 +16,21 @@
         android:textSize="18sp"/>
 
     <EditText
-        android:id="@+id/editTextPickUpLocation"
+        android:id="@+id/editpesan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewPickUpLocation"
         android:layout_marginTop="8dp"
+        tools:ignore="MissingConstraints"
         android:hint="Masukkan alamat penjemputan"/>
 
-    <TextView
-        android:id="@+id/textViewPickUpTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Waktu Penjemputan"
-        android:layout_below="@id/editTextPickUpLocation"
-        android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"/>
-
-    <EditText
-        android:id="@+id/editTextPickUpTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewPickUpTime"
-        android:layout_marginTop="8dp"
-        android:hint="Masukkan waktu penjemputan"/>
 
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send"
-        android:layout_below="@id/editTextPickUpTime"
+        android:layout_below="@id/editpesan"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
 </RelativeLayout>
