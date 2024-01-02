@@ -28,22 +28,29 @@ public class MenuKedua extends AppCompatActivity {
 
 
         Button button = findViewById(R.id.buttonSubmit);
-       final EditText editpesan = findViewById(R.id.editpesan);
+       //final EditText editpesan = findViewById(R.id.editpesan);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String pesan = editpesan.getText().toString();
-                boolean installed = appinstalledOrNot("com.Whatsapp");
-                if (installed){
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone"+"+6289654524950"+"&text"+pesan));
+                String phoneNumber = "+6289654524950";
+               // String message = editpesan.getText().toString();
+
+                Uri uri = Uri.parse("smsto:" + phoneNumber);
+                Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+                intent.setPackage("com.whatsapp");
+                //intent.putExtra("sms_body", message);
+
+                try {
                     startActivity(intent);
-                }else{
-                    Toast.makeText(MenuKedua.this, "Whatsapp Tidak Terinstall", Toast.LENGTH_SHORT).show();
+                } catch (android.content.ActivityNotFoundException ex) {
+                    Toast.makeText(MenuKedua.this, "WhatsApp not installed.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+
+
     }
 
     private boolean appinstalledOrNot(String url){
