@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DA70D6"
+    android:background="#41b549"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Welcome"
-                android:textColor="#F000FA"
+                android:textColor="#009688"
                 android:textSize="32sp"
                 android:textStyle="bold"/>
 
@@ -118,13 +118,13 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"/>
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Register"
+                android:backgroundTint="#41b549"
                 app:cornerRadius="32dp"/>
-
 
 
 
